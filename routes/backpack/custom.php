@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\Crud\SongsCrudController;
+
 // --------------------------
 // Custom Backpack Routes
 // --------------------------
@@ -14,6 +16,7 @@ Route::group([
         (array) config('backpack.base.web_middleware', 'web'),
         (array) config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace'  => 'App\Http\Controllers\Admin',
+    //'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-}); // this should be the absolute last line of this file
+    Route::crud('songs', SongsCrudController::class);
+});
