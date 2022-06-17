@@ -10,7 +10,7 @@ use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Different\DifferentCore\app\Utils\Breadcrumb\BreadcrumbMenuItem;
 use App\Http\Requests\Admin\Crud\SongStoreRequest;
 use App\Http\Requests\Admin\Crud\SongUpdateRequest;
-use Different\DifferentCore\app\Http\Controllers\Crud\BaseCrudController;
+use Different\DifferentCore\app\Http\Controllers\Cruds\BaseCrudController;
 
 class SongsCrudController extends BaseCrudController
 {
