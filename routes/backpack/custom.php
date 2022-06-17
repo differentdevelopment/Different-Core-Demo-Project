@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Admin\Crud\SongsCrudController;
+use App\Http\Controllers\Admin\Cruds\SongsCrudController;
+use App\Http\Controllers\Admin\Pages\EmailPageController;
 
 // --------------------------
 // Custom Backpack Routes
@@ -19,4 +20,6 @@ Route::group([
     //'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
     Route::crud('songs', SongsCrudController::class);
+    Route::get('emails', [EmailPageController::class, 'index'])->name('email');
+    Route::get('emails/{type}', [EmailPageController::class, 'send'])->name('email.send');
 });

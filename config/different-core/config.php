@@ -15,5 +15,10 @@ return [
             'songs.songs',
             'las la-music'
         ),
+        new SidebarMenuItem(
+            '/admin/emails',
+            'emails.emails',
+            'las la-envelope'
+        ),
     ],
 ];

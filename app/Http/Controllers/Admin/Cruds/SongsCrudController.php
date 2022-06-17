@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Crud;
+namespace App\Http\Controllers\Admin\Cruds;
 
 use App\Models\Song;
 use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
