@@ -9,6 +9,16 @@
         a.footer-link {
             color: #2e58ff;
         }
+
+        /*
+        .background {
+            background: #c7c7c7;
+        }
+
+        .foreground {
+            background: #526c8b;
+        }
+        */
     </style>
 @endsection
 
@@ -31,20 +41,59 @@
         Nulla commodo magna sed ultricies pharetra. <a href="#">Ut ipsum odio, mattis a aliquam quis</a>, pretium vitae ligula. Donec et eros tortor. Phasellus malesuada gravida fermentum. Sed id dolor et mauris dignissim imperdiet vel quis metus. Ut gravida finibus turpis, in sodales sapien eleifend sed. Proin tincidunt dictum risus, eget volutpat est dignissim vitae. Aliquam bibendum mi tellus, at fringilla ipsum tempus sed. Donec interdum luctus interdum. Maecenas pharetra arcu orci, quis scelerisque odio tempor ac. Maecenas semper sapien vitae aliquet efficitur. Suspendisse dignissim metus vitae ipsum placerat aliquam. Duis hendrerit ac libero sed suscipit. Duis ultrices, sapien vitae luctus cursus, justo magna eleifend tortor, quis lacinia lectus ex nec ipsum. In placerat turpis diam, et ornare justo gravida sed.
     </p>
 </x-different-core::email-content>
-<x-different-core::email-button href="https://different.hu/" text="Megtekintés"></x-different-core::email-button>
-<x-different-core::email-button href="https://different.hu/" text="Megtekintés 2 "></x-different-core::email-button>
+<x-different-core::email-button
+    href="https://different.hu/"
+    text="Megtekintés"
+    background="#2e58ff"
+    textColor="#fff"
+></x-different-core::email-button>
+<x-different-core::email-button
+    href="https://different.hu/"
+    text="Megtekintés"
+    background="#ffc107"
+    textColor="#5d4037"
+></x-different-core::email-button>
 <x-different-core::email-content>
-    <h1>asd</h1>
+    <h3>Teszt tartalom</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non felis justo. Quisque sem odio, gravida et ex a, suscipit efficitur nibh. Sed quis erat bibendum, ultrices nibh vitae, pretium magna. Quisque non volutpat nulla. Fusce mollis arcu vitae orci varius venenatis. Vivamus et purus ac urna ornare posuere. Cras dapibus dapibus lacus, sed bibendum risus ultrices eget.
+    </p>
 </x-different-core::email-content>
-<x-different-core::email-notification></x-different-core::email-notification>
+<x-different-core::email-notification
+    background="#FFC402"
+    type="Figyelem"
+    title="Elem hiányzik"
+    message="Lehet, hogy a termék elfogyott. A lehető leghamarabb elküldjük Önnek."
+    textColor="#7A5200"
+    buttonHref="https://different.hu/"
+    buttonText="Részletek"
+></x-different-core::email-notification>
 <x-different-core::email-notification
     background="#4DBC2B"
     type="Siker"
-    title="Sikereres teszt üzenet"
-    message="Your order has been delivered. If you have any question feel free to get in touch with us. We will be happy to assist you."
+    title="Szállítás kész"
+    message="Megrendelését kézbesítettük. Ha bármilyen kérdése van, forduljon hozzánk bizalommal. Szívesen segítünk Önnek."
     textColor="#fff"
     buttonHref="https://different.hu/"
-    buttonText="mobil applikáció fejlesztés"
+    buttonText="Részletek"
+></x-different-core::email-notification>
+<x-different-core::email-notification
+    background="#FF5121"
+    type="Figyelem"
+    title="Szállítás törölve"
+    message="Megrendelését nem sikerült teljesíteni, ezért töröltük. Fiókját nem terheltük meg, és elnézést kérünk a kellemetlenségért."
+    textColor="#fff"
+    buttonHref="https://different.hu/"
+    buttonText="Részletek"
+></x-different-core::email-notification>
+<x-different-core::email-notification
+    background="#49AEFC"
+    type="Információ"
+    title="Tétel elküldve"
+    message="Az Ön áruja elhagyta raktárunkat. Hamarosan meg kell kapnia."
+    textColor="#fff"
+    buttonHref="https://different.hu/"
+    buttonText="Részletek"
 ></x-different-core::email-notification>
 @endsection
 
