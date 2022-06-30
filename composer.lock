@@ -1072,7 +1072,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/Different-Core",
-                "reference": "559998d484346e03140a744c58f274d66ea8c3d0"
+                "reference": "ce67430956bd3e517de259c0e6a6ac33d7ff0b99"
             },
             "require": {
                 "backpack/permissionmanager": "^6.0",

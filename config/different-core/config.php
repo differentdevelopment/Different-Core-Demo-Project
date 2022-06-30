@@ -21,4 +21,5 @@ return [
             'las la-envelope'
         ),
     ],
+    'magic_link_login' => true,
 ];

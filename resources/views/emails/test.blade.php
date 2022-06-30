@@ -22,10 +22,6 @@
     </style>
 @endsection
 
-@section('logo')
-    <img height="auto" src="{{ $message->embed('email-logo.png') }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
-@endsection
-
 @section('content')
 <x-different-core::email-title>
     Name: {{ $name }}
@@ -95,13 +91,4 @@
     buttonHref="https://different.hu/"
     buttonText="Részletek"
 ></x-different-core::email-notification>
-@endsection
-
-
-@section('footer')
-    © {{ date('Y') }} Different Fejlesztő Kft. - Minden jog fenntartva.
-    <br>
-    Email: <a class="footer-link" href="mailto:hello@different.hu">hello@different.hu</a>
-    <br>
-    Web: <a class="footer-link" href="https://different.hu/">https://different.hu/</a>
 @endsection
