@@ -1,5 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/MusicPlayer.js": "/js/MusicPlayer.js",
+    "/js/manifest.js": "/js/manifest.js",
     "/css/app.css": "/css/app.css",
-    "/css/backpack-overrides.css": "/css/backpack-overrides.css"
+    "/css/backpack-overrides.css": "/css/backpack-overrides.css",
+    "/js/vendor.js": "/js/vendor.js"
 }

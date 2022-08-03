@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\Cruds\SongsCrudController;
 use App\Http\Controllers\Admin\Pages\EmailPageController;
+use App\Http\Controllers\Admin\Pages\MusicPlayerPageController;
 
 // --------------------------
 // Custom Backpack Routes
@@ -22,4 +23,6 @@ Route::group([
     Route::crud('songs', SongsCrudController::class);
     Route::get('emails', [EmailPageController::class, 'index'])->name('email');
     Route::get('emails/{type}', [EmailPageController::class, 'send'])->name('email.send');
+    Route::get('music-player', [MusicPlayerPageController::class, 'index'])->name('music-player');
+
 });

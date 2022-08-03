@@ -107,6 +107,20 @@ class SongsCrudController extends BaseCrudController
                     'class' => 'form-group col-12',
                 ],
             ],
+            [
+                'name' => 'map',
+                'label' => __('songs.map'),
+                'view_namespace' => 'different-core::fields',
+                'type' => 'map',
+                'default' => [
+                    'lat' => 47.133074,
+                    'lng' => 19.248949,
+                    'zoom' => 7,
+                ],
+                'wrapper' => [
+                    'class' => 'form-group col-12',
+                ],
+            ],
         ]);
         #endregion
     }

@@ -16,6 +16,11 @@ return [
             'las la-music'
         ),
         new SidebarMenuItem(
+            '/admin/music-player',
+            'music-player.player',
+            'las la-play'
+        ),
+        new SidebarMenuItem(
             '/admin/emails',
             'emails.emails',
             'las la-envelope'

@@ -6,4 +6,5 @@ return [
     'title' => 'Cím',
     'file' => 'Fájl',
     'cover' => 'Borító kép',
+    'map' => 'Térkép',
 ];

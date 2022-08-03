@@ -1,1 +1,2 @@
-require('./bootstrap');
+import "./bootstrap";
+import "./react/MusicPlayer.tsx";
