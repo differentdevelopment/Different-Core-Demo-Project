@@ -2,28 +2,29 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Different\DifferentCore\app\Models\File;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Different\DifferentCore\app\Traits\HasUploadFields;
 
 class Song extends Model
 {
     use HasFactory;
     use CrudTrait;
 
-    #region Globális változók
+    //region Globális változók
     protected $table = 'songs';
+
     protected $guarded = ['id'];
+
     protected $dates = [
         'created_at',
         'updated_at',
     ];
-    #endregion
-    
-    #region Funkciók
+    //endregion
+
+    //region Funkciók
     public static function boot()
     {
         parent::boot();
@@ -37,9 +38,9 @@ class Song extends Model
             }
         });
     }
-    #endregion
+    //endregion
 
-    #region Relációk
+    //region Relációk
     public function file(): BelongsTo
     {
         return $this->belongsTo(File::class);
@@ -49,5 +50,5 @@ class Song extends Model
     {
         return $this->belongsTo(File::class);
     }
-    #endregion
+    //endregion
 }

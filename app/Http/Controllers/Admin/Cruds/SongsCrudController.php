@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers\Admin\Cruds;
 
-use App\Models\Song;
-use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-use Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-use Different\DifferentCore\app\Utils\Breadcrumb\BreadcrumbMenuItem;
 use App\Http\Requests\Admin\Crud\SongStoreRequest;
 use App\Http\Requests\Admin\Crud\SongUpdateRequest;
+use App\Models\Song;
+use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Different\DifferentCore\app\Http\Controllers\Cruds\BaseCrudController;
+use Different\DifferentCore\app\Utils\Breadcrumb\BreadcrumbMenuItem;
 
 class SongsCrudController extends BaseCrudController
 {
     use ListOperation;
+
     // use ShowOperation;
     use CreateOperation {
         store as traitStore;
@@ -40,27 +41,27 @@ class SongsCrudController extends BaseCrudController
         ];
     }
 
-    protected  function setupListOperation()
+    protected function setupListOperation()
     {
-        #region Columns
+        //region Columns
         $this->crud->addColumn([
             'name' => 'title',
             'label' => __('songs.title'),
             'type' => 'text',
         ]);
-        #endregion
+        //endregion
 
-        #region Filters
+        //region Filters
         $this->crud->addFilter([
             'name' => 'title',
             'type' => 'text',
             'label' => __('songs.title'),
         ],
-        false,
-        function ($value) {
-            $this->crud->addClause('where', 'title', 'like', '%' . $value . '%');
-        });
-        #endregion
+            false,
+            function ($value) {
+                $this->crud->addClause('where', 'title', 'like', '%'.$value.'%');
+            });
+        //endregion
     }
 
     protected function setupCreateOperation()
@@ -77,7 +78,7 @@ class SongsCrudController extends BaseCrudController
 
     protected function addFields()
     {
-        #region Create & Update Operation
+        //region Create & Update Operation
         $this->crud->addFields([
             [
                 'name' => 'title',
@@ -122,21 +123,23 @@ class SongsCrudController extends BaseCrudController
                 ],
             ],
         ]);
-        #endregion
+        //endregion
     }
 
     public function store()
     {
         parent::store();
+
         return $this->traitStore();
     }
 
     public function update()
     {
         parent::update();
+
         return $this->traitUpdate();
     }
-    
-    #region Nem Backpack metódusok
-    #endregion
+
+    //region Nem Backpack metódusok
+    //endregion
 }
