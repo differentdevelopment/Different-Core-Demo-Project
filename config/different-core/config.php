@@ -24,6 +24,11 @@ return [
             'emails.emails',
             'las la-envelope'
         ),
+        new SidebarMenuItem(
+            '/admin/project/account',
+            'accounts.accounts',
+            'las la-users'
+        ),
     ],
     'magic_link_login' => true,
 ];

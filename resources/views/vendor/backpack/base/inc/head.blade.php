@@ -16,7 +16,7 @@
     @endif
 
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/scss/backpack-overrides.scss'])
 
     @yield('after_styles')
     @stack('after_styles')

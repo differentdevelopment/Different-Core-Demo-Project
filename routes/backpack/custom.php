@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Cruds\SongsCrudController;
+use App\Http\Controllers\Admin\Cruds\AccountsCrudController;
 use App\Http\Controllers\Admin\Pages\EmailPageController;
 use App\Http\Controllers\Admin\Pages\MusicPlayerPageController;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,10 @@ Route::group([
     Route::get('emails', [EmailPageController::class, 'index'])->name('email');
     Route::get('emails/{type}', [EmailPageController::class, 'send'])->name('email.send');
     Route::get('music-player', [MusicPlayerPageController::class, 'index'])->name('music-player');
+
+    Route::group([
+        'prefix' => 'project',
+    ], function(){
+        Route::crud('account', AccountsCrudController::class);
+    });
 });
