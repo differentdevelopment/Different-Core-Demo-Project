@@ -10,7 +10,7 @@ class MusicPlayerPageController
     {
         return view('pages.music-player', [
             'title' => __('music-player.player'),
-            'audio_lists' => Song::query()->with('file', 'cover')->get(),
+            'audio_lists' => Song::query()->withoutAccountScope()->with('file', 'cover')->get(),
         ]);
     }
 }
