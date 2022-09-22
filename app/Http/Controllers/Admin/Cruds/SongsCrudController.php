@@ -11,6 +11,7 @@ use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Different\DifferentCore\app\Http\Controllers\Cruds\BaseCrudController;
 use Different\DifferentCore\app\Utils\Breadcrumb\BreadcrumbMenuItem;
+use Different\DifferentCore\app\Utils\Tab\TabItem;
 
 class SongsCrudController extends BaseCrudController
 {
@@ -37,6 +38,31 @@ class SongsCrudController extends BaseCrudController
                 backpack_url('dashboard'),
                 __('backpack::crud.admin'),
                 'las la-tachometer-alt',
+            ),
+        ];
+        
+        $this->data['tabs'] = [
+            new TabItem(
+                route('songs.index'),
+                __('songs.songs'),
+                'las la-music',
+                'song.list',
+                false,
+                true,
+                true,
+                true,
+                true
+            ),
+            new TabItem(
+                route('admin.user.index'),
+                __('different-core::users.users'),
+                'las la-user',
+                'user.list',
+                false,
+                true,
+                true,
+                true,
+                true
             ),
         ];
     }
