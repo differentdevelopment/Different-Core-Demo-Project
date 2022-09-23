@@ -30,5 +30,5 @@ return [
             'las la-users'
         ),
     ],
-    'magic_link_login' => true,
+    'magic_link_login' => false,
 ];
