@@ -437,3 +437,29 @@ html:not([dir=rtl]) .sidebar {
         }
     }
 }
+
+.auth-card {
+    background: #fff;
+    border-radius: .75rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    max-width: 450px;
+    margin: 0 auto;
+
+    .auth-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--ion-color-primary);
+        padding: 20px 15px;
+
+        .auth-brand {
+            font-size: 30px;
+            color: var(--ion-color-primary-contrast) !important;
+        }
+    }
+
+    .auth-bottom {
+        padding: 25px;
+    }
+}
