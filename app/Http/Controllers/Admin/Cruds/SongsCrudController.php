@@ -122,6 +122,8 @@ class SongsCrudController extends BaseCrudController
                 'wrapper' => [
                     'class' => 'form-group col-12',
                 ],
+                'accepted_file_types' => ['audio/mpeg', 'audio/wav'],
+                'max_file_size' => '15MB',
             ],
             [
                 'name' => 'cover',
@@ -133,8 +135,10 @@ class SongsCrudController extends BaseCrudController
                 'wrapper' => [
                     'class' => 'form-group col-12',
                 ],
+                'accepted_file_types' => ['image/jpeg', 'image/png'],
+                'max_file_size' => '2MB',
             ],
-            [
+            /*[
                 'name' => 'map',
                 'label' => __('songs.map'),
                 'view_namespace' => 'different-core::fields',
@@ -147,6 +151,19 @@ class SongsCrudController extends BaseCrudController
                 'wrapper' => [
                     'class' => 'form-group col-12',
                 ],
+            ],*/
+            [
+                'name' => 'files',
+                'label' => __('songs.files'),
+                'view_namespace' => 'different-core::fields',
+                'type' => 'file_multiple',
+                'has_preview' => true,
+                'upload' => true,
+                'wrapper' => [
+                    'class' => 'form-group col-12',
+                ],
+                // 'accepted_file_types' => ['image/*'],
+                // 'max_file_size' => '1MB',
             ],
         ]);
         //endregion
@@ -154,16 +171,12 @@ class SongsCrudController extends BaseCrudController
 
     public function store()
     {
-        parent::store();
-
-        return $this->traitStore();
+        return parent::store();
     }
 
     public function update()
     {
-        parent::update();
-
-        return $this->traitUpdate();
+        return parent::update();
     }
 
     //region Nem Backpack metódusok

@@ -7,6 +7,7 @@ use Different\DifferentCore\app\Models\File;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Different\DifferentCore\app\Traits\HasAccount;
 
 class Song extends Model
@@ -47,6 +48,12 @@ class Song extends Model
     {
         return $this->belongsTo(File::class);
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class);
+    }
+
 
     public function cover(): BelongsTo
     {

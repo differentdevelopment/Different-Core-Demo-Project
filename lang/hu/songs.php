@@ -7,4 +7,5 @@ return [
     'file' => 'Fájl',
     'cover' => 'Borító kép',
     'map' => 'Térkép',
+    'files' => 'Fájlok',
 ];
