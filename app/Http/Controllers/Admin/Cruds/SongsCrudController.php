@@ -48,7 +48,7 @@ class SongsCrudController extends BaseCrudController
                 'las la-music',
                 'song.list',
                 false,
-                true,
+                false,
                 true,
                 true,
                 true
@@ -59,7 +59,7 @@ class SongsCrudController extends BaseCrudController
                 'las la-user',
                 'user.list',
                 false,
-                true,
+                false,
                 true,
                 true,
                 true
