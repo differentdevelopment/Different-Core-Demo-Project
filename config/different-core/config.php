@@ -1,6 +1,7 @@
 <?php
 
 use Different\DifferentCore\app\Utils\Sidebar\SidebarMenuItem;
+use Different\DifferentCore\app\Utils\Sidebar\SidebarMenuLabel;
 
 return [
     'sidebar_menu' => [
@@ -9,6 +10,7 @@ return [
             'backpack::base.dashboard',
             'las la-home'
         ),
+        new SidebarMenuLabel("Teszt"),
         new SidebarMenuItem(
             '/admin/songs',
             'songs.songs',
