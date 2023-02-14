@@ -9,12 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Different\DifferentCore\app\Traits\HasAccount;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
 
 class Song extends Model
 {
     use HasAccount;
     use HasFactory;
     use CrudTrait;
+    use HasTranslations;
 
     //region Globális változók
     protected $table = 'songs';
@@ -24,6 +26,10 @@ class Song extends Model
     protected $dates = [
         'created_at',
         'updated_at',
+    ];
+    
+    protected $translatable = [
+        'title',
     ];
     //endregion
 
@@ -53,8 +59,7 @@ class Song extends Model
     {
         return $this->belongsToMany(File::class);
     }
-
-
+    
     public function cover(): BelongsTo
     {
         return $this->belongsTo(File::class);

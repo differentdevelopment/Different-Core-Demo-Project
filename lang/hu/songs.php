@@ -8,4 +8,5 @@ return [
     'cover' => 'Borító kép',
     'map' => 'Térkép',
     'files' => 'Fájlok',
+    'files_two' => 'Második fájl',
 ];

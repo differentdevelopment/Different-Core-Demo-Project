@@ -168,20 +168,6 @@ class SongsCrudController extends BaseCrudController
                 // 'accepted_file_types' => ['image/*'],
                 // 'max_file_size' => '1MB',
             ],
-            [
-                'name' => 'files_two',
-                'label' => __('songs.files_two'),
-                'view_namespace' => 'different-core::fields',
-                'type' => 'file_multiple',
-                'has_preview' => true,
-                'upload' => true,
-                'wrapper' => [
-                    'class' => 'form-group col-12',
-                ],
-                'clickable' => false,
-                'accepted_file_types' => ['image/*'],
-                'max_file_size' => '1MB',
-            ],
         ]);
         //endregion
     }
